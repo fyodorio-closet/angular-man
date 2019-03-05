@@ -10,6 +10,7 @@
 }
 body {
 	--color-primary: #b62f26;
+	--color-secondary: rgba(0, 0, 0, .87);
 	margin: 0;
 	padding: 0;
 	width: 100vw;
@@ -50,10 +51,15 @@ body {
 #header > #links li {
 	margin-left: 12px;
 }
+a {
+	text-decoration: none;
+	color: var(--color-secondary);
+}
 #content {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: row;
+	color: var(--color-secondary);
 }
 #content > #spacer {
 	flex-grow: 1;
