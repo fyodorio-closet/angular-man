@@ -14,6 +14,8 @@ body {
 	padding: 0;
 	width: 100vw;
 	height: 100vh;
+	min-height: 640px;
+	min-width: 220px;
 	font-family: 'Roboto', sans-serif;
 }
 #page {
@@ -27,6 +29,7 @@ body {
 	background-image: url('../img/background.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-size: contain;
 }
 #header {
 	flex-basis: 64px;
@@ -36,10 +39,13 @@ body {
 	align-items: center;
 	font-size: 36px;
 }
-#header > #home {
+#header > #home, #header > #home-small {
 	letter-spacing: 8px;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+#header > #home-small {
+	display: none;
 }
 #header > #links li {
 	margin-left: 12px;
@@ -53,7 +59,7 @@ body {
 	flex-grow: 1;
 }
 #content > #description {
-	padding-top: 64px;
+	padding-top: 48px;
 	text-align: right;
 	flex-basis: 50%;
 	font-size: 36px;
@@ -64,6 +70,67 @@ body {
 	text-align: center;
 	line-height: 48px;
 }
-#home, #footer, .emphasized {
+#home, #home-small, #footer, .emphasized {
 	color: var(--color-primary);
+}
+@media only screen and (max-width: 720px) {
+	#content > #description {
+		font-size: 24px;
+	}
+}
+@media only screen and (max-width: 590px) {
+	#content > #description {
+		font-size: 18px;
+		line-height: 32px;
+	}
+	#header {
+		font-size: 28px;
+	}
+	#header > #links li {
+		margin-left: 18px;
+	}
+}
+@media only screen and (max-width: 450px) {
+	#header > #home-small {
+		display: block;
+	}
+	#header > #home {
+		display: none;
+	}
+	#spacer {
+		display: none;
+	}
+	#content > #description {
+		font-size: 22px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-grow: 1;
+		text-align: center;
+		padding-bottom: 36px;
+	}
+}
+@media only screen and (max-width: 320px) {
+	#header > #home-small {
+		display: none;
+	}
+	#header > #links li {
+		margin-left: 0;
+	}
+	#links {
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+	}
+	#content > #description {
+		font-size: 22px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-grow: 1;
+		text-align: center;
+		padding-bottom: 36px;
+	}
 }
