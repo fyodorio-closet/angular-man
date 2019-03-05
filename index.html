@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<title>Fyodor</title>
+</head>
+<body>
+	<section id="page">
+		<header id="header">
+			<div id="home">Fyodor</div>
+			<ul id="links">
+				<li class="fab fa-github"></li>
+				<li class="fab fa-codepen"></li>
+				<li class="fab fa-twitter"></li>
+				<li class="fas fa-envelope"></li>
+			</ul>
+		</header>
+		<section id="content">
+			<article id="description">
+
+			</article>
+		</section>
+		<footer id="footer"></footer>
+	</section>
+<script>
+	const currentYear = new Date().getFullYear();
+	document.getElementById('footer').innerHTML = `© Fyodor Loenko, ${currentYear}`;
+</script>
+</body>
+</html>
